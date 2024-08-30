@@ -3,7 +3,7 @@
 
 WebScrape-Ollama is a powerful web scraping application designed to extract, clean, and parse data efficiently from web pages 
 using Selenium, BeautifulSoup, and the Ollama 3.1 model. The app provides a streamlined interface for interacting with scraped 
-data, making it easy to harness the information you need.
+data, making it easy to harness the information you need. *Works well with Wikipedia pages*
 
 ## How To Get Started
 1. **Initialize the Environment:** Set up your environment by installing the required dependencies listed in the `requirements.txt` file.
@@ -42,3 +42,18 @@ data, making it easy to harness the information you need.
 - **lxml and html5lib:** For efficient HTML and XML processing.
 - **langchain and langchain_ollama:** For integrating AI-powered data processing with the Ollama 3.1 model.
 - **python-dotenv:** For managing environment variables securely.
+
+## Areas for Improvement
+
+While the current version of the web scraping AI app performs well, there are several areas where it could be enhanced:
+
+- **Speed of Processing:** The app could benefit from optimization techniques to reduce the time it takes to scrape and process large volumes of data. Implementing more efficient algorithms and parallel processing could significantly improve performance.
+  
+- **Captcha Handling:** One of the challenges with web scraping is dealing with CAPTCHA tests, which often prevent automated scripts from accessing certain websites. Integrating advanced CAPTCHA-solving techniques or bypass strategies would allow the app to scrape data more effectively.
+
+- **Error Handling:** Enhancing the app’s ability to handle unexpected errors, such as network timeouts or changes in website structure, would make it more robust and reliable.
+
+- **Scalability:** As the data sources grow, ensuring that the app can scale efficiently to handle increased loads without compromising on speed or accuracy is crucial.
+
+- **User-Friendly Interface:** Improving the user interface to make the app more accessible to non-technical users would broaden its usability and appeal.
+
