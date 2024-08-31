@@ -1,5 +1,5 @@
 # WebScrape-Ollama
-![Video Example](https://github.com/user-attachments/assets/db6743b5-76bc-43aa-bdfd-d607e4c53fac)
+[Video Example](https://github.com/user-attachments/assets/db6743b5-76bc-43aa-bdfd-d607e4c53fac)
 
 WebScrape-Ollama is a powerful web scraping application designed to extract, clean, and parse data efficiently from web pages 
 using Selenium, BeautifulSoup, and the Ollama 3.1 model. The app provides a streamlined interface for interacting with scraped 
