@@ -10,6 +10,9 @@ def scrape_website(website):
     # chrome_driver_path = "./chromedriver" # No longer needed, Selenium Manager will handle it
     options = webdriver.ChromeOptions() #Specify how the crhome driver should operate (e.g. run headless, ignore images, etc)
     options.add_argument("--headless")
+    options.add_argument("--no-sandbox") # Add this line
+    options.add_argument("--disable-dev-shm-usage") # Add this line
+    options.binary_location = "/usr/bin/chromium" # Add this line: Explicitly point to chromium binary
     # Remove the explicit service argument to let Selenium Manager handle driver discovery
     driver = webdriver.Chrome(options=options) 
     
