@@ -10,6 +10,11 @@ url = st.text_input("Enter a website URL: ")
 if st.button("Scrape Site"):
     st.write("Scraping the website")
     
+    # Ensure the URL has a scheme
+    if url and not url.startswith("http://") and not url.startswith("https://"):
+        url = "https://" + url
+        st.info(f"URL modified to: {url}") # Inform user about the change
+
     result = scrape_website(url)
     body_content = extract_body_content(result)
     cleaned_content = clean_body_content(body_content)
