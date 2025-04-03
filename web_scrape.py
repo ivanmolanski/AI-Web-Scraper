@@ -5,10 +5,13 @@ from bs4 import BeautifulSoup
 def scrape_website(website):
     print("Lauching Chrome browser...")
     
-    chrome_driver_path = "./chromedriver" #Specify where chrome driver is
+    print("Lauching Chrome browser...")
+    
+    # chrome_driver_path = "./chromedriver" # No longer needed, Selenium Manager will handle it
     options = webdriver.ChromeOptions() #Specify how the crhome driver should operate (e.g. run headless, ignore images, etc)
     options.add_argument("--headless")
-    driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
+    # Remove the explicit service argument to let Selenium Manager handle driver discovery
+    driver = webdriver.Chrome(options=options) 
     
     try:
         driver.get(website) #use web driver to go to specific website
@@ -44,4 +47,3 @@ def split_dom_content(dom_content, max_length=6000): #split content for token li
     return [
         dom_content[i : i + max_length] for i in range(0, len(dom_content), max_length)
     ]
-    
