@@ -1,9 +1,5 @@
-import os # Add import
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
-
-# Default to localhost if OLLAMA_BASE_URL is not set
-ollama_base_url = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
 
 template = (
  "You are tasked with extracting specific information from the following text content: {dom_content}. "
@@ -14,8 +10,7 @@ template = (
     "4. **Direct Data Only:** Your output should contain only the data that is explicitly requested, with no other text."
 )
 
-# Use the base_url from environment variable or default
-model = OllamaLLM(model="llama3.1", base_url=ollama_base_url)
+model = OllamaLLM(model="llama3.1")
 
 def parse_with_ollama(dom_chunks, parse_description):
     prompt = ChatPromptTemplate.from_template(template) 
