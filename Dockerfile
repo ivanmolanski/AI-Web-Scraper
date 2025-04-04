@@ -24,6 +24,9 @@ RUN apt-get update && \
     xargs -a packages.txt apt-get install -y --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
+# Add ollama group and user (Ollama install script might expect this)
+RUN groupadd -r ollama && useradd -r -g ollama -d /usr/share/ollama -s /bin/false ollama
+
 # Install Ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
