@@ -1,8 +1,10 @@
 streamlit 
 langchain 
-langchain_ollama
+# langchain_ollama # Removed
 selenium
 beautifulsoup4
 lxml 
 html5lib
 python-dotenv
+requests>=2.25.1 # Added
+tenacity>=8.0.0 # Added
